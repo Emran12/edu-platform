@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+
+{% block title %}Home - EduPlatform{% endblock %}
+
+{% block content %}
+<h1 class="page-title">📚 Available Courses</h1>
+
+<div class="course-list">
+    {% for course in courses %}
+        <div class="course-card">
+            <a href="{% url 'course_detail' course.id %}">
+                <img src="{{ course.thumbnail.url }}" alt="{{ course.title }}">
+                <h2>{{ course.title }}</h2>
+            </a>
+            <p>{{ course.description|truncatewords:20 }}</p>
+            <p><strong>Instructor:</strong> {{ course.teacher.username }}</p>
+        </div>
+    {% empty %}
+        <p>No courses available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="course-container">
+        <h1>{{ course.title }}</h1>
+        <img src="{{ course.thumbnail.url }}" alt="{{ course.title }}" width="300">
+        <p><strong>Instructor:</strong> {{ course.teacher.username }}</p>
+        <p>{{ course.description }}</p>
+
+        <h2>Lessons</h2>
+        <ol>
+            {% for lesson in lessons %}
+                <li>
+                    <strong>{{ lesson.title }}</strong><br>
+                    {{ lesson.content|linebreaks }}<br>
+                    {% if lesson.video_url %}
+                        <a href="{{ lesson.video_url }}" target="_blank">Watch Video</a>
+                    {% endif %}
+                </li>
+            {% empty %}
+                <p>No lessons added yet.</p>
+            {% endfor %}
+        </ol>
+    </div>
+</body>
+</html>

@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}EduPlatform{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">EduPlatform</div>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Courses</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'courses' %}">Courses</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="/admin/login/">Login</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +24,7 @@
     </main>
 
     <footer>
-        <p>© 2025 EduPlatform. All rights reserved.</p>
+        <p>&copy; 2025 EduPlatform. All rights reserved.</p>
     </footer>
 </body>
 </html>

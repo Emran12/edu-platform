@@ -1,0 +1,63 @@
+/* Container styling */
+.register-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+/* Form group */
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input fields */
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.register-form input:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+/* Submit button */
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #003366;
+}

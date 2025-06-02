@@ -17,12 +17,50 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    /* display: block; */
 }
+
+/* Submenu styling */
+.nav-links li ul {
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+}
+
+.nav-links li:hover ul {
+    display: block;
+}
+
+.nav-links li ul li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+.nav-links li ul li a:hover {
+    background-color: #0066cc;
+}
+
 
 .page-title {
     text-align: center;
